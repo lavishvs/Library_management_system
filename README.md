@@ -40,35 +40,40 @@ npm install
 npm run dev
 ```
 
-### **2. Set Environment Variables**
-Create a `.env` file in the root directory and add your environment variables:
----
-PORT=4000
-MONGO_URI=mongodb://127.0.0.1:27017
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRE=7d
-COOKIE_EXPIRES=7
-SMTP_HOST=smtp.gmail.com
-SMTP_SERVICE=gmail
-SMTP_PORT=465
-SMTP_MAIL=your_email@gmail.com
-SMTP_PASSWORD=your_email_password
-CLOUDINARY_CLIENT_NAME=your_cloudinary_name
-CLOUDINARY_CLIENT_API=your_cloudinary_api_key
-CLOUDINARY_CLIENT_SECRET=your_cloudinary_api_secret
-FRONTEND_URL=http://localhost:5173
+### **🔑 Environment Variables**
+
+Create a `.env` file in the root directory and add the following environment variables:
+
+```plaintext
+PORT=4000                             # Port number for the server
+MONGO_URI=mongodb://127.0.0.1:27017   # MongoDB connection string
+JWT_SECRET=your_jwt_secret            # Secret key for JWT authentication
+JWT_EXPIRE=7d                         # JWT token expiration time
+COOKIE_EXPIRES=7                      # Cookie expiration time in days
+SMTP_HOST=smtp.gmail.com              # SMTP host for email service
+SMTP_SERVICE=gmail                    # SMTP service provider
+SMTP_PORT=465                         # SMTP port number
+SMTP_MAIL=your_email@gmail.com        # Email address for sending emails
+SMTP_PASSWORD=your_email_password     # Password for the email account
+CLOUDINARY_CLIENT_NAME=your_cloudinary_name  # Cloudinary account name
+CLOUDINARY_CLIENT_API=your_cloudinary_api_key  # Cloudinary API key
+CLOUDINARY_CLIENT_SECRET=your_cloudinary_api_secret  # Cloudinary API secret
+FRONTEND_URL=http://localhost:5173    # URL for the frontend application
 
 ### **3. Run the Server**
 Start the server using the command:
 ```bash
 npm run dev
 ```
-### **4.📂 Project Structure**
+
+### **📂 Project Structure**
+
+```plaintext
 server/
 ├── config/              # Configuration files
 ├── controllers/         # Route handlers
 ├── database/            # Database connection
-├── Middlewares/         # Custom middlewares
+├── middlewares/         # Custom middlewares
 ├── models/              # Mongoose models
 ├── routes/              # API routes
 ├── services/            # Background tasks
